@@ -3,7 +3,6 @@ const head = function(arr){
 };
 
 const assertEqual = function(head, last) {
-    console.log(last);
   if (head === last) {
     console.log(`Assertion Passed: ${head} === ${last}`);
   } else {
