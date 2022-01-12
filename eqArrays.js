@@ -15,10 +15,16 @@
 // }
 
 
-const eqArrays = function(arr1, arr2){
-  return Array.isArray(arr1) && Array.isArray(arr2) && arr1.length === arr2.length &&
-  arr1.every((val, i) => val === arr2[i]);
-}
+const eqArrays = function(arr1, arr2) {
+  let test = arr1.every(function(val, index) {
+    return  val  ===  arr2[index];
+  });
+  if (Array.isArray(arr1) && Array.isArray(arr2) && arr1.length === arr2.length && test === true) {
+    return true;
+  } else {
+    return false;
+  }
+};
 
 const assertEqual = function(arrs, last) {
   if (arrs === last) {
@@ -28,9 +34,9 @@ const assertEqual = function(arrs, last) {
   }
 };
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true) // => true
-assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false) // => false
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => true
+assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false); // => false
 
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true) // => true
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false) // => false
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // => true
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false); // => false
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
