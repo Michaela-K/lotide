@@ -23,24 +23,24 @@ const countLetters = function(words) {
   return output;
 };
 
-let actual = JSON.stringify(countLetters('LHL CNN'));
-let expected = JSON.stringify({ L: 2, H: 1, C: 1, N: 2 });
+// let actual = JSON.stringify(countLetters('LHL CNN'));
+// let expected = JSON.stringify({ L: 2, H: 1, C: 1, N: 2 });
+// assertEqual(actual, expected);
 
-
-console.log('LHL CNN');  
+let actual = JSON.stringify(countLetters('lighthouse in the house'));
+let expected = JSON.stringify({
+    l: 1,
+    i: 2,
+    g: 1,
+    h: 4,
+    t: 2,
+    o: 2,
+    u: 2,
+    s: 2,
+    e: 3,
+    n: 1,
+  });
 assertEqual(actual, expected);
-// countLetters("lighthouse in the house"); //{
-//   l: 1,
-//   i: 2,
-//   g: 1,
-//   h: 4,
-//   t: 2,
-//   o: 2,
-//   u: 2,
-//   s: 2,
-//   e: 3,
-//   n: 1,
-// }
 
 
 
