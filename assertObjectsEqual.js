@@ -1,11 +1,11 @@
-const assertObjectsEqual = function(obj1, obj2) {
+const assertObjectsEqual = function (obj1, obj2) {
   // Implement me!
   const areObjsEq = eqObjects(obj1, obj2);
-console.log(areObjsEq);
-  const inspect = require('util').inspect; //returns the string representation of the objects. like json. stringify
+  console.log(areObjsEq);
+  const inspect = require("util").inspect; //returns the string representation of the objects. like json. stringify
   if (areObjsEq) {
     // console.log(`Example label: ${inspect(obj1)}`);
-    console.log(`Assertion Passed: ${inspect(obj1)} === ${inspect(obj2)}`);  
+    console.log(`Assertion Passed: ${inspect(obj1)} === ${inspect(obj2)}`);
   } else {
     console.log(`Assertion Failed: ${inspect(obj1)} !== ${inspect(obj2)}`);
   }
@@ -22,11 +22,11 @@ const eqObjects = function (obj1, obj2) {
   for (const key of keyArr1) {
     // console.log(obj1[key], obj2[key]);
     // console.log()
-    if(Array.isArray(obj1[key]) && Array.isArray(obj2[key])){
+    if (Array.isArray(obj1[key]) && Array.isArray(obj2[key])) {
       console.log(eqArrays(obj1[key], obj2[key]));
-     return eqArrays(obj1[key], obj2[key]);
+      return eqArrays(obj1[key], obj2[key]);
     }
-    if(obj1[key] !== obj2[key]){
+    if (obj1[key] !== obj2[key]) {
       return false;
     }
   }
@@ -35,4 +35,4 @@ const eqObjects = function (obj1, obj2) {
 
 const ab = { a: "9", b: "2" };
 const ba = { b: "2", a: "1" };
-assertObjectsEqual(ab ,ba); // => true
+assertObjectsEqual(ab, ba); // => true
