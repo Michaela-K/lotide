@@ -4,22 +4,22 @@ const assert = require('chai').assert;
 
 
 describe("#middle", () => {
-  it("returns [3, 4] for [1, 2, 3, 4, 5, 6]", () => {
+  it("returns middle of array", () => {
     assert.deepEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
   });
-  it("returns [] for [1]", () => {
+  it("rreturns middle of array", () => {
     assert.deepEqual(middle([1]), []);
   });
-  it("returns [1] for [1, 2]", () => {
+  it("returns middle of array", () => {
     assert.deepEqual(middle([1, 2]), []);
   });
-  it("returns [2] for [1, 2, 3]", () => {
+  it("returns middle of array", () => {
     assert.deepEqual(middle([1, 2, 3]), [2]);
   });
-  it("returns [3] for [1, 2, 3, 4, 5]", () => {
+  it("returns middle of array", () => {
     assert.deepEqual(middle([1, 2, 3, 4 ,5]), [3]);
   });
-  it("returns [2, 3] for [1, 2, 3, 4]", () => {
+  it("returns middle of array", () => {
     assert.deepEqual(middle([1, 2, 3, 4]), [2, 3]);
   });
 });

@@ -1,9 +1,24 @@
-const assertEqual = require("../assertEqual");
+// const assertEqual = require("../assertEqual");
+// const assert = require('chai').assert;
+const expect = require('chai').expect
 const eqArrays = require("../eqArrays");
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => true
-assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false); // => false
+describe("#eqArrays", () => {
+  it("returns true if both arrays are equal", () => {
+    const areEqual = eqArrays([1, 2, 3], [1, 2, 3]);
+    expect(areEqual).to.eql(true);
+  });
+  it("returns false if both arrays are not equal", () => {
+    const areEqual = eqArrays([3, 2, 1], [1, 2, 3]);
+    expect(areEqual).to.eql(false);
+  });
+  it("returns true if both arrays are equal", () => {
+    const areEqual = eqArrays(['1','2','3'], ["1", "2", "3"]);
+    expect(areEqual).to.eql(true);
+  });
+  it("returns false if both arrays are not equal", () => {
+    const areEqual = eqArrays(['1','2',3], ["1", "2", "3"]);
+    expect(areEqual).to.eql(false);
+  });
+});
 
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // => true
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false); // => false
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS

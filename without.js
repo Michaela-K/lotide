@@ -1,23 +1,3 @@
-const eqArrays = function(arr1, arr2) {
-  let test = arr1.every(function(val, index) {
-    return val === arr2[index];
-  });
-  if (Array.isArray(arr1) && Array.isArray(arr2) && arr1.length === arr2.length && test === true) {
-    return true;
-  } else {
-    return false;
-  }
-};
-
-const assertArraysEqual = function(a1, a2) {
-  //use eqArrays for comparison
-  if (eqArrays(a1, a2)) {
-    console.log(`Assertion Passed: ${a1} === ${a2}`);
-  } else {
-    console.log(`Assertion Failed: ${a1} !== ${a2}`);
-  }
-};
-
 //return new array, removing unwanted elements from original.
 const without = function(source, itemsToRm) {
   let newArr = [];
@@ -32,9 +12,4 @@ const without = function(source, itemsToRm) {
   return newArr;
 };
 
-const words = ["hello", "world", "lighthouse"];
-console.log(without(words, ["lighthouse"])); // no need to capture return value for this test case
-assertArraysEqual(words, ["hello", "world", "lighthouse"]); // Make sure the original array was not altered by the without function
-
-console.log(without([1, 2, 3], [1]));// => [2, 3]
-without(["1", "2", "3"], [1, 2, "3"]); // => ["1", "2"]
+module.exports = without;

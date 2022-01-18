@@ -1,21 +1,6 @@
-const assertEqual = function (actual, expected) {
-  //for checking primitive return types
-  if (actual === expected) {
-    console.log(`Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-const eqArrays = function (arr1, arr2) {
-  let test = arr1.every(function (val, index) {
-    return val === arr2[index];
-  });
-  if (arr1.length === arr2.length && test === true) {
-    return true;
-  } else {
-    return false;
-  }
-};
+// const assertEqual = require("./assertEqual");
+const eqArrays = require("./eqArrays");
+
 const eqObjects = function (obj1, obj2) {
   //to compare obj data? - using obj key iteration
   //returns true (if both objects have identical keys with identical values)
@@ -37,11 +22,8 @@ const eqObjects = function (obj1, obj2) {
   }
   return true;
 };
-// const ab = { a: "1", b: "2" };
-// const ba = { b: "2", a: "1" };
-// assertEqual(eqObjects(ab, ba), true); // => true
-// const abc = { a: "1", b: "2", c: "3" };
-// eqObjects(ab, abc); // => false
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-assertEqual(eqObjects(cd, dc), true); // => true
+
+module.exports = eqObjects;
+
+
+
