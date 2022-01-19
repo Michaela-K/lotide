@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@michaelak/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "lighthouse labs lodash clone",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/Michaela-K/lotide.git"
   },
-  "author": "",
+  "author": "Michaela K",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Michaela-K/lotide/issues"

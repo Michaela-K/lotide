@@ -1,4 +1,4 @@
-// const assertEqual = require("../assertEqual");
+
 const countLetters = require("../countLetters");
 const expect = require('chai').expect;
 

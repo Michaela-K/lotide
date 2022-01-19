@@ -1,7 +1,7 @@
 const assertObjectsEqual = require("../assertObjectsEqual");
-// const eqObjects = require("./eqObjects");
+
 const expect = require('chai').expect
-// const assert = require('chai').assert;
+
 
 describe("#assertObjectsEqual", () => {
   it("returns false if both objects dont have identical keys with identical values", () => {

@@ -5,10 +5,10 @@ const takeUntil = function (array, callback) {
   //looping through using index and value because of .entries()
   for (const [index, value] of array.entries()){ 
     if(!callback(value)){                         //
-      newArr.push(array.slice(index, index + 1).pop());  //pop takes it out of the array and it will be a value
+      newArr.push(array.slice(index, index + 1).pop());  
     }
     if(callback(value)){
-      break;   //stops loop. Does not work with for loops
+      break;  
     }
   }
   return newArr;
