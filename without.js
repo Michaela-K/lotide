@@ -6,5 +6,4 @@ const without = function(source, itemsToRm) {
   return result;
 }
 
-
 module.exports = without;
