@@ -1,6 +1,8 @@
 // implement a new function letterPositions which will return all the indices 
 // in the string where each character is found.
 // skip spaces
+const assertArraysEqual = require('./assertArraysEqual');
+
 
 const letterPositions = function(sentence) {
   const results = {};
@@ -20,5 +22,6 @@ const letterPositions = function(sentence) {
 
   return results;
 };
+// console.log(assertArraysEqual(letterPositions("hello").e, [1]));
 
 module.exports = letterPositions;
