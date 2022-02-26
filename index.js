@@ -14,6 +14,7 @@ const eqObjects = require("./eqObjects");
 const assertEqual = require("./assertEqual");
 const assertArraysEqual = require("./assertArraysEqual");
 const assertObjectsEqual = require("./assertObjectsEqual");
+const flatten = require("./flatten")
 
 module.exports = {
   head,
@@ -32,6 +33,7 @@ module.exports = {
   assertEqual,
   assertArraysEqual,
   assertObjectsEqual,
+  flatten
 };
 
 //open the node REPL
