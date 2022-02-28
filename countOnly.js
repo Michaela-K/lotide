@@ -6,7 +6,7 @@ const countOnly = function(allItems, itemsToCount) {
   //return an obj - no. of keys with truthy value
   const results = {};
   for (const item of allItems) {
-    if (results[item]) {   //why does results[item] equal 1
+    if (results[item]) {  
       results[item] += 1;
     } else {
       results[item] = 1;
