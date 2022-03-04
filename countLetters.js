@@ -10,7 +10,7 @@ const countLetters = function(words) {
     }
   }
   }
-  return output;
+  return JSON.stringify(output);
 };
 
 module.exports = countLetters;

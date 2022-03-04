@@ -7,6 +7,8 @@ const map = function (array, callback) {
   return results;
 };
 
+let callback = function(item){
+  return item + "er";
+}
+
 module.exports = map;
-
-
